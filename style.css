@@ -82,19 +82,20 @@ header h1 {
 }
 
 /* ====== HOME =================== */
-#home::before {
+/*#home::before {
   content: "";
   position: absolute;
   display: block;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(70% + var(--nav-height));
+  height: 70rem;
   background-color: var(--primary-light);
   z-index: -1;
-}
+} */
 
 #home {
+  background-color: var(--primary-light);
   padding-block: 0;
   padding-top: calc(4.1rem + var(--nav-height));
 }
@@ -132,6 +133,6 @@ header h1 {
 
 #home img {
   margin-inline: auto;
-  width: 26.4rem;
+  width: 28.5rem;
   display: block;
 }
