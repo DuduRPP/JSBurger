@@ -41,6 +41,10 @@ img {
   max-width: 100%;
 }
 
+section {
+  margin-bottom: 10rem;
+}
+
 header h4 {
   color: var(--primary);
   font-size: 1.4rem;
@@ -133,6 +137,6 @@ header h1 {
 
 #home img {
   margin-inline: auto;
-  width: 28.5rem;
+  width: 100%;
   display: block;
 }
