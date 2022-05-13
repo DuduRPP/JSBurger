@@ -47,6 +47,10 @@ img {
   max-width: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 .button {
   width: fit-content;
 
@@ -70,6 +74,10 @@ img {
   margin-bottom: 6rem;
 
   transition: background 0.2s;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .button:hover {
@@ -122,22 +130,64 @@ header h1 {
 }
 
 /* ====== MENU =================== */
+#navigation .menu {
+  opacity: 0;
+  visibility: hidden;
+}
 
-#menu {
+#navigation .closeMenuButton {
   display: none;
 }
 
-#menu.expanded {
-  overflow: hidden;
+#navigation .openMenuButton {
+  position: relative;
+}
 
-  display: initial;
+/* Menu aberto*/
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+#navigation.show .menu {
+  display: grid;
+  place-content: center;
+
+  opacity: 1;
+  visibility: visible;
+
+  background-color: var(--primary);
+
+  height: 100vh;
+  width: 100vw;
+
   position: fixed;
   top: 0;
   left: 0;
+}
 
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+#navigation.show .logo,
+#navigation.show .closeMenuButton {
+  display: initial;
+  position: relative;
+  z-index: 10;
+}
+
+#navigation.show .logo svg path {
+  fill: white;
+}
+
+#navigation.show ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+#navigation.show ul li {
+  color: var(--bg-beige);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
 }
 
 /* ====== HOME =================== */

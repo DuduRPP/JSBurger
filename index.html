@@ -7,8 +7,8 @@
     <title>JsBurger</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <navbar id="navigation">
+  <body class="menu-expanded">
+    <nav id="navigation" class="show">
       <div class="wrapper">
         <a href="#" class="logo">
           <svg
@@ -56,6 +56,17 @@
             />
           </svg>
         </a>
+
+        <div class="menu">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Avaliações</a></li>
+            <li><a>Classicos</a></li>
+            <li><a>Nossa Historia</a></li>
+            <li><a>Contato</a></li>
+          </ul>
+        </div>
+
         <div class="openMenuButton">
           <svg
             width="40"
@@ -87,18 +98,26 @@
             />
           </svg>
         </div>
-        <div id="menu" class="expanded">
-          <div class="closeMenuButton">X</div>
-          <ul>
-            <li>Home</li>
-            <li>Avaliações</li>
-            <li>Classicos</li>
-            <li>Nossa Historia</li>
-            <li>Contato</li>
-          </ul>
+
+        <div class="closeMenuButton">
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 10L10 30M10 10L30 30"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </div>
       </div>
-    </navbar>
+    </nav>
 
     <section id="home">
       <div class="wrapper">
