@@ -7,8 +7,8 @@
     <title>JsBurger</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="menu-expanded">
-    <nav id="navigation" class="show">
+  <body class="">
+    <nav id="navigation" class="">
       <div class="wrapper">
         <a href="#" class="logo">
           <svg
@@ -59,11 +59,11 @@
 
         <div class="menu">
           <ul>
-            <li><a>Home</a></li>
-            <li><a>Avaliações</a></li>
-            <li><a>Classicos</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#reviews">Avaliações</a></li>
+            <li><a>Cardápio</a></li>
             <li><a>Nossa Historia</a></li>
-            <li><a>Contato</a></li>
+            <li><a class="button">Faça o seu pedido</a></li>
           </ul>
         </div>
 
@@ -130,7 +130,7 @@
             Carnes e Molhos 100% Artesanais e Grande Variedade de
             Acompanhamentos. <br />Também temos Opções Veganas!
           </p>
-          <a href="" class="button">
+          <a href="#reviews" class="button">
             <svg
               width="20"
               height="21"
@@ -160,7 +160,7 @@
         </div>
       </div>
     </section>
-    <section class="reviews">
+    <section id="reviews">
       <div class="wrapper">
         <header>
           <h4>Avaliações</h4>
@@ -168,5 +168,7 @@
         </header>
       </div>
     </section>
+
+    <script src="script.js"></script>
   </body>
 </html>

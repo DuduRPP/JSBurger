@@ -51,6 +51,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 .button {
   width: fit-content;
 
@@ -129,6 +133,18 @@ header h1 {
   justify-content: space-between;
 }
 
+/* ====== SCROLL =================== */
+
+#navigation.scroll {
+  background-color: var(--primary);
+}
+#navigation.scroll .logo svg path {
+  fill: var(--bg-beige);
+}
+#navigation.scroll .openMenuButton svg path {
+  stroke: var(--bg-beige);
+}
+
 /* ====== MENU =================== */
 #navigation .menu {
   opacity: 0;
@@ -137,10 +153,6 @@ header h1 {
 
 #navigation .closeMenuButton {
   display: none;
-}
-
-#navigation .openMenuButton {
-  position: relative;
 }
 
 /* Menu aberto*/
@@ -183,11 +195,26 @@ body.menu-expanded {
   gap: 4.8rem;
 }
 
-#navigation.show ul li {
+#navigation.show .button {
+  color: var(--primary);
+  background-color: var(--bg-beige);
+}
+#navigation.show .button:hover {
+  color: var(--bg-beige);
+  background-color: var(--primary);
+
+  filter: brightness(125%);
+}
+
+#navigation.show ul li a {
   color: var(--bg-beige);
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 3.1rem;
+}
+
+#navigation.show ul li a.button {
+  font-size: 1.8rem;
 }
 
 /* ====== HOME =================== */
