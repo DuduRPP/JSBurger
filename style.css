@@ -123,6 +123,11 @@ header h1 {
   z-index: 100;
 }
 
+#navigation .closeMenuButton,
+#navigation .openMenuButton {
+  cursor: pointer;
+}
+
 #navigation .wrapper {
   padding-block: 1.6rem;
   padding-inline: 2.4rem;
@@ -149,6 +154,7 @@ header h1 {
 #navigation .menu {
   opacity: 0;
   visibility: hidden;
+  transform: translateY(-100%);
 }
 
 #navigation .closeMenuButton {
@@ -162,6 +168,8 @@ body.menu-expanded {
 }
 
 #navigation.show .menu {
+  transform: translateY(0);
+
   display: grid;
   place-content: center;
 
@@ -176,6 +184,8 @@ body.menu-expanded {
   position: fixed;
   top: 0;
   left: 0;
+
+  transition: transform 0.35s;
 }
 
 #navigation.show .logo,
