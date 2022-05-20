@@ -12,6 +12,12 @@ onScroll();
 function onScroll() {
   showToTop();
   navbarScroll();
+
+  activateCurrentSection(home);
+  activateCurrentSection(reviews);
+  activateCurrentSection(classics);
+  activateCurrentSection(about);
+  activateCurrentSection(contact);
 }
 
 function navbarScroll() {
@@ -19,6 +25,28 @@ function navbarScroll() {
     navigation.classList.add("scroll");
   } else {
     navigation.classList.remove("scroll");
+  }
+}
+
+// Active Sections
+
+function activateCurrentSection(section) {
+  const targetLine = scrollY + innerHeight / 2;
+
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+
+  const linePassedTop = targetLine >= sectionTop;
+  const lineAboveHeight = targetLine <= sectionHeight + sectionTop;
+
+  const inSectionBoundaries = linePassedTop && lineAboveHeight;
+
+  const sectionId = section.getAttribute("id");
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}`);
+
+  menuElement.classList.remove("active");
+  if (inSectionBoundaries) {
+    menuElement.classList.add("active");
   }
 }
 

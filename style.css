@@ -220,6 +220,10 @@ body.menu-expanded {
   gap: 4.8rem;
 }
 
+#navigation.show .page-links {
+  margin-bottom: 4.8rem;
+}
+
 #navigation.show ul.social-links {
   display: flex;
   flex-direction: row;
@@ -376,6 +380,10 @@ body.menu-expanded {
   background-color: var(--bg-beige);
 }
 
+#about p {
+  margin-bottom: 1.6rem;
+}
+
 #about .content {
   text-indent: 3.2rem;
   text-align: justify;
@@ -395,6 +403,7 @@ body.menu-expanded {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-bottom: 2.4rem;
 }
 
 #contact .content a.button {
@@ -474,4 +483,253 @@ a.backToTopButton.show.onFooter svg circle {
 
 a.backToTopButton.show.onFooter svg path {
   stroke: var(--primary);
+}
+
+/* ====== RESPONSIVE =================== */
+
+@media (min-width: 1023px) {
+  /*=================== GERAL=================== */
+  body {
+    overflow: auto;
+  }
+
+  section {
+    padding-block: 12rem;
+  }
+
+  .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+  }
+
+  .col-a {
+    grid-area: A;
+  }
+  .col-b {
+    grid-area: B;
+  }
+
+  /*=================== NAVIGATION=================== */
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: initial;
+    display: initial;
+    flex-direction: initial;
+    position: initial;
+    transform: initial;
+    color: initial;
+    background: initial;
+    font-size: initial;
+    font-weight: initial;
+  }
+  nav#navigation .closeMenuButton,
+  nav#navigation .openMenuButton,
+  nav#navigation .social-links {
+    display: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 69%;
+  }
+
+  nav#navigation .menu ul.page-links {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation ul.page-links li a {
+    color: var(--primary);
+    opacity: 0.7;
+    transition: opacity 0.4s;
+  }
+
+  nav#navigation ul.page-links li a.active,
+  nav#navigation ul.page-links li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  nav#navigation ul.page-links li a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    opacity: 1;
+
+    position: relative;
+    bottom: -2.4rem;
+    left: -0.5rem;
+
+    display: block;
+
+    transition: width 0.2s;
+  }
+
+  nav#navigation.scroll ul.page-links li a::after {
+    background-color: white;
+  }
+
+  nav#navigation ul.page-links li a.active::after,
+  nav#navigation ul.page-links li a:hover::after {
+    width: 100%;
+    padding-inline: 0.5rem;
+  }
+
+  nav#navigation a.button {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+    gap: 1.6rem;
+
+    border: 1px solid var(--primary);
+    border-radius: 4rem;
+
+    color: var(--primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+  }
+
+  nav#navigation a.button.active,
+  nav#navigation a.button:hover {
+    color: var(--primary-light);
+    background-color: var(--primary);
+  }
+
+  nav#navigation.scroll ul.page-links li a {
+    color: white;
+    opacity: 0.7;
+    transition: opacity 0.4s;
+  }
+
+  nav#navigation ul.page-links li a.active,
+  nav#navigation ul.page-links li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+
+  nav#navigation.scroll a.button {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+  }
+  nav#navigation.scroll a.button.active,
+  nav#navigation.scroll a.button:hover {
+    background-color: var(--primary);
+    border: none;
+    filter: brightness(1.2);
+  }
+
+  /*=================== HOME =================== */
+  #home .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+  }
+  #home .col-a {
+    text-align: left;
+  }
+  #home .col-a .button {
+    margin-inline: 0;
+  }
+  #home .col-b {
+    display: flex;
+    align-items: flex-end;
+  }
+  #home .col-b img {
+    width: 52rem;
+  }
+
+  /*=================== REVIEWS =================== */
+  #reviews .swiper-slide {
+    width: 40%;
+  }
+
+  #reviews .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  #reviews .swiper-slide:nth-child(3n) {
+    width: 40%;
+  }
+
+  /*=================== CLASSICS =================== */
+  #classics h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
+  #classics .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #classics .card {
+    width: 45%;
+    flex-grow: 1;
+  }
+
+  /*=================== ABOUT =================== */
+  #about .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "B A";
+    gap: 6.7rem;
+  }
+
+  #about .col-a {
+    align-self: center;
+  }
+
+  #about .content h2 {
+    margin-bottom: 0;
+  }
+
+  #about .content p {
+    margin-bottom: 0;
+  }
+
+  /*=================== CONTACT =================== */
+  #contact .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+    gap: 6.7rem;
+  }
+
+  #contact .content {
+    text-align: left;
+  }
+
+  section#contact .col-a .content .button {
+    margin-inline: 0;
+    margin-bottom: 3rem;
+  }
+
+  #contact .col-a {
+    align-self: center;
+  }
+
+  #contact .col-b iframe {
+    height: 50rem;
+  }
+
+  /*=================== FOOTER =================== */
+  footer .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "A B";
+  }
+
+  footer .col-a {
+    align-self: center;
+  }
+
+  footer .col-b {
+    align-self: center;
+    justify-self: flex-end;
+  }
 }
