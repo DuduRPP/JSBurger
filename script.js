@@ -1,12 +1,16 @@
 "use strict";
 
+// DOM Variables
 let body = document.querySelector("body");
 let navigation = document.getElementById("navigation");
+let backToTopButton = document.querySelector(".backToTopButton");
+let reviews = document.getElementById("reviews");
+let footer = document.querySelector("footer");
 
 //Scroll
 onScroll();
 function onScroll() {
-  console.log(scrollY);
+  showToTop();
   navbarScroll();
 }
 
@@ -25,7 +29,7 @@ function closeMenu() {
 }
 
 function addEventsOnMenu() {
-  let menu_elements = document.querySelectorAll("#navigation a");
+  let menu_elements = document.querySelectorAll("#navigation .page-links a");
   for (let elem of menu_elements) {
     elem.addEventListener("click", closeMenu);
   }
@@ -45,6 +49,21 @@ window.addEventListener("scroll", onScroll);
 closeMenuButton.addEventListener("click", closeMenu);
 openMenuButton.addEventListener("click", openMenu);
 
+//ToTheTop Button
+function showToTop() {
+  console.log(window.scrollY);
+  if (scrollY + innerHeight > innerHeight * 1.75) {
+    backToTopButton.classList.add("show");
+    if (scrollY + innerHeight > footer.offsetTop) {
+      backToTopButton.classList.add("onFooter");
+    } else {
+      backToTopButton.classList.remove("onFooter");
+    }
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+}
+
 /* Swiper */
 const swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
@@ -57,3 +76,22 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 });
+
+/* Scroll Reveal */
+
+const scrollReveal = ScrollReveal({
+  origin: "left",
+  distance: "50px",
+  duration: 900,
+});
+
+scrollReveal.reveal(
+  `
+#home header,#home .content,
+#reviews header,#reviews .content,
+#classics header,#classics .content .card,
+#about header,#about .content,
+#contact header,#contact .content,
+footer`,
+  { interval: 50 }
+);
