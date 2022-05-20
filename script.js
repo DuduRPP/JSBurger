@@ -44,3 +44,16 @@ let openMenuButton = document.querySelector(".openMenuButton");
 window.addEventListener("scroll", onScroll);
 closeMenuButton.addEventListener("click", closeMenu);
 openMenuButton.addEventListener("click", openMenu);
+
+/* Swiper */
+const swiper = new Swiper(".swiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 30,
+  mousewheel: true,
+  keyboard: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JsBurger</title>
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="">
@@ -167,9 +174,9 @@
           <h2>O que os clientes dizem sobre JsBurger</h2>
         </header>
 
-        <div class="content">
-          <div class="cards">
-            <div class="card">
+        <div class="content swiper">
+          <div class="cards swiper-wrapper">
+            <div class="card swiper-slide">
               <div class="stars">
                 <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
                 ><span>&#9733;</span><span>&#9733;</span>
@@ -188,7 +195,7 @@
                 >
               </blockquote>
             </div>
-            <div class="card">
+            <div class="card swiper-slide">
               <div class="stars">
                 <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
                 ><span>&#9733;</span><span>&#9733;</span>
@@ -207,7 +214,7 @@
                 >
               </blockquote>
             </div>
-            <div class="card">
+            <div class="card swiper-slide">
               <div class="stars">
                 <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span
                 ><span>&#9733;</span><span>&#9733;</span>
@@ -229,9 +236,67 @@
               </blockquote>
             </div>
           </div>
+
+          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
+
+    <section id="classics">
+      <div class="wrapper">
+        <header>
+          <h4>Cardápio</h4>
+          <h2>Venha conhecer os nossos deliciosos clássicos</h2>
+        </header>
+        <div class="content">
+          <div class="cards">
+            <div class="card">
+              <img
+                src="./assets/cheddar-java.png"
+                alt="hamburger cheddar java"
+              />
+              <div class="text">
+                <h4>BASIC</h4>
+                <p>hamburger</p>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/cheddar-java.png"
+                alt="hamburger cheddar java"
+              />
+              <div class="text">
+                <h4>Classic C</h4>
+                <p>hamburger</p>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/cheddar-java.png"
+                alt="hamburger cheddar java"
+              />
+              <div class="text">
+                <h4>Big C++</h4>
+                <p>hamburger</p>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="./assets/cheddar-java.png"
+                alt="hamburger cheddar java"
+              />
+              <div class="text">
+                <h4>Cheddar Java</h4>
+                <p>hamburger</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
     <script src="script.js"></script>
   </body>
