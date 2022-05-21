@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-  <img alt="OriginSix" src="./Sem-título.png" width="100%">
+  <img alt="OriginSix" src="./Cover.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -37,4 +37,4 @@ JSBurger é uma página institucional no formato One Page, responsiva, para uma 
 
 ## 📝 Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE.md) para mais detalhes.
